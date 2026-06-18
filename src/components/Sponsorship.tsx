@@ -47,11 +47,11 @@ export default function Sponsorship() {
                 <span className="font-bold text-blue-400">30%</span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-700 pb-2">
-                <span>Senior Managers</span>
+                <span>Entrepreneurs</span>
                 <span className="font-bold text-blue-400">20%</span>
               </div>
               <div className="flex justify-between items-center border-b border-gray-700 pb-2">
-                <span>Entrepreneurs</span>
+                <span>Investors</span>
                 <span className="font-bold text-blue-400">10%</span>
               </div>
               <div className="pt-2">
