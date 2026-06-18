@@ -21,7 +21,7 @@ export default function Pricing() {
           style={{ background: 'white', color: 'var(--dark)', border: '1px solid #ddd' }}
         >
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-1 text-xs font-bold rounded-full" style={{ background: 'var(--gold)', color: 'var(--dark)' }}>
-            EARLY BIRD - EXPIRES 4/15/26
+            
           </div>
 
           <div>
