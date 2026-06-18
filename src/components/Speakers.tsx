@@ -39,7 +39,7 @@ const speakers = [
     specialty: 'Executive Dealmaking',
     icon: Target,
     bio: 'Closed $5B+ in transactions, teaches the exact frameworks used in boardroom negotiations',
-    confirmed: false
+    confirmed: true
   },
   {
     name: 'Dr. Jennifer Walsh',
@@ -55,7 +55,7 @@ const speakers = [
     specialty: 'Profit Engineering',
     icon: TrendingUp,
     bio: 'Built 7 companies to 8-figure exits, specializes in identifying and executing on $100K+ profit opportunities',
-    confirmed: false
+    confirmed: true
   },
   {
     name: 'Lisa Morgan',
