@@ -9,8 +9,7 @@ export default function Pricing() {
       <p className="text-gray-400 mb-3 max-w-2xl mx-auto text-lg">
         Choose the level of engagement that matches your commitment to transformation
       </p>
-      <p className="text-gray-500 mb-2 max-w-2xl mx-auto text-sm">
-        Early Bird pricing ends April 15th, 2026
+      <p className="text-gray-500 mb-2 max-w-2xl mx-auto text-sm">        
       </p>
       <p className="font-semibold mb-12 max-w-2xl mx-auto text-sm" style={{ color: 'var(--gold)' }}>
         Only 300 tickets available for this exclusive event
