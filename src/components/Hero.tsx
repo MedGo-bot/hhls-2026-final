@@ -17,7 +17,10 @@ export default function Hero() {
         <h1 className="text-6xl md:text-7xl lg:text-8xl mb-6 text-white font-bold leading-tight">
           The 2026 Mandate
         </h1>
-
+         <p className="text-4xl md:text-5xl mb-6 italic font-semibold" style={{ color: 'var(--gold)' }}>
+          Beyond the Algorithm
+        </p>
+        
         <p className="max-w-3xl mx-auto mb-6 text-2xl md:text-3xl text-gray-200 font-semibold">
           Walk in Tuesday with questions. Walk out Wednesday with a complete 12-month operational blueprint.
         </p>
