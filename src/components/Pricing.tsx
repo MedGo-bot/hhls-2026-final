@@ -25,7 +25,7 @@ export default function Pricing() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-2 mt-2">Vanguard Early Bird</h3>
+            <h3 className="text-2xl font-bold mb-2 mt-2">Vanguard</h3>
             <p className="text-sm text-gray-600 mb-4">Save $850 off regular price</p>
             <div className="text-5xl font-bold my-6">$649.99</div>
             <ul className="text-left space-y-3 mb-6">
