@@ -80,7 +80,7 @@ export default function Sponsorship() {
               sponsorship@hiltonheadleadershipsummit.com
             </a>
             <p className="text-sm text-gray-500 mt-4">
-              Or call us directly: <span className="font-bold text-gray-400">(916) 898-4319</span>
+              Or call us directly: <span className="font-bold text-gray-400">(916) 890-9591 or 916 287-7127</span>
             </p>
           </div>
         </div>
