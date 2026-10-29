@@ -1,12 +1,10 @@
-import React from 'react';
-
 export default function Header() {
   return (
     <header className="py-5 px-5 border-b border-gray-800 sticky top-0 bg-slate-950/95 backdrop-blur-md z-50">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         
         {/* Brand Identity with 2027 Badge */}
-        <a href="#" className="flex items-center gap-3 group text-decoration-none">
+        <a href="#" className="flex items-center gap-3 group no-underline">
           <div className="text-lg md:text-xl tracking-[0.2em] uppercase font-bold text-white transition-colors group-hover:text-amber-300">
             Hilton Head <span style={{ color: 'var(--gold)' }}>Leadership Summit</span>
           </div>
