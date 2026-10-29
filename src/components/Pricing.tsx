@@ -305,7 +305,7 @@ export default function Pricing() {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 
-         {/* Track Selection Radios */}
+                {/* Track Selection Radios */}
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-3">
                     Selected Residency Track *
@@ -343,14 +343,15 @@ export default function Pricing() {
                 {/* Submit Action */}
                 <button
                   type="submit"
-                  className="w-full bg-amber-400 hover:bg-amber-300 text-black font-bold py-4 rounded-xl transition text-sm tracking-wide shadow-lg shadow-amber-500/10 mt-6"
+                  disabled={isSubmitting}
+                  className="w-full bg-amber-400 hover:bg-amber-300 text-black font-bold py-4 rounded-xl transition text-sm tracking-wide shadow-lg shadow-amber-500/10 mt-6 disabled:opacity-50"
                 >
-                  Submit Executive Registration
+                  {isSubmitting ? 'Submitting...' : 'Submit Executive Registration'}
                 </button>
               </form>
-            </div>
-          </div>
-        )}
+            </>
+          )}
+        </div>
       </div>
     </section>
   );
