@@ -4,7 +4,6 @@ import { ShieldCheck, Check, Sparkles, Building2, ArrowRight, CheckCircle2, Cloc
 interface SponsorTier {
   name: string;
   tagline: string;
-  investment: string;
   slots: string;
   badge?: string;
   featured?: boolean;
@@ -15,7 +14,7 @@ const sponsorTiers: SponsorTier[] = [
   {
     name: "Boardroom Pod Co-Practitioner",
     tagline: "Embedded Advisory & Collaborative Problem-Solving",
-    slots: "3 Available",
+    slots: "3 Available Slots",
     benefits: [
       "1 All-Access Executive Pass (all sessions, estate dining, receptions & dinners)",
       "Permanent working seat inside an assigned 6-person closed-door Boardroom Pod",
@@ -42,7 +41,7 @@ const sponsorTiers: SponsorTier[] = [
   {
     name: "Kinetic Vitality & Recovery Curator",
     tagline: "Executive Health, Movement & Stamina",
-    slots: "1 Available",
+    slots: "1 Available Slot",
     benefits: [
       "1 All-Access Executive Pass for your Managing Director",
       "Underwriter of the Sunrise Atlantic Beach Movement Labs & Breathwork",
@@ -59,7 +58,7 @@ export default function Sponsorship() {
     contactName: '',
     workEmail: '',
     phone: '',
-    tierInterest: 'Presenting Title Underwriter ($35,000)',
+    tierInterest: 'Presenting Title Underwriter',
     message: ''
   });
 
@@ -79,11 +78,12 @@ export default function Sponsorship() {
     setIsSubmitting(true);
 
     try {
+      const accessKey = (import.meta as any).env?.VITE_WEB3FORMS_ACCESS_KEY || '719625d5-8679-4b1a-b604-4f8c32992d95';
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || '719625d5-8679-4b1a-b604-4f8c32992d95',
+          access_key: accessKey,
           from_name: 'Hilton Head Summit Partnership Desk',
           subject: `New 2027 Sponsorship Inquiry: ${formData.companyName} (${formData.contactName})`,
           ...formData
@@ -124,7 +124,7 @@ export default function Sponsorship() {
           </h2>
 
           <p className="max-w-3xl mx-auto text-lg sm:text-xl text-gray-300 leading-relaxed font-normal mb-6">
-           Rather than selling passive sponsorship packages, we invite a select group of enterprise partners into the room as active participants alongside 150 C-level executives.
+            Rather than selling passive sponsorship packages, we invite a select group of enterprise partners into the room as active participants alongside 150 C-level executives.
           </p>
 
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-gray-400 leading-relaxed">
@@ -152,11 +152,11 @@ export default function Sponsorship() {
           </div>
         </div>
 
-        {/* Option 3: The Curated Fellowship Philosophy Banner */}
+        {/* The Curated Fellowship Philosophy Banner */}
         <div className="p-8 sm:p-10 rounded-2xl border border-gray-800 bg-slate-900/60 mb-20 max-w-4xl mx-auto shadow-xl backdrop-blur-sm">
           <div className="flex items-center gap-3 mb-4">
             <HeartHandshake className="w-6 h-6" style={{ color: 'var(--gold)' }} />
-            <h3 className="text-xl sm:text-2xl font-bold text-white"> Mutual Respect &amp; Fellowship</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white">Mutual Respect &amp; Fellowship</h3>
           </div>
           
           <p className="text-gray-300 text-base leading-relaxed mb-4">
@@ -168,7 +168,7 @@ export default function Sponsorship() {
           </p>
         </div>
 
-        {/* Sponsorship Packages Grid */}
+        {/* Sponsorship Packages Grid (100% Private Pricing) */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-20">
           {sponsorTiers.map((tier) => (
             <div
@@ -192,15 +192,10 @@ export default function Sponsorship() {
 
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-gray-400">{tier.slots}</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-amber-400">{tier.slots}</span>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                 <p className="text-xs text-gray-400 mb-6">{tier.tagline}</p>
-
-                <div className="mb-6">
-                  <span className="text-4xl font-extrabold text-white">{tier.investment}</span>
-                  <span className="text-gray-400 text-xs ml-2">/ partnership</span>
-                </div>
 
                 <div className="border-t border-gray-800 pt-6 space-y-3 mb-8">
                   {tier.benefits.map((b, i) => (
@@ -221,7 +216,7 @@ export default function Sponsorship() {
                     : { border: '2px solid var(--gold)', color: 'var(--gold)' }
                 }
               >
-                Inquire for {tier.name}
+                Inquire for Prospectus
               </a>
             </div>
           ))}
@@ -314,7 +309,23 @@ export default function Sponsorship() {
                     />
                   </div>
                 </div>
-                             
+
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
+                    Partnership Tier of Interest *
+                  </label>
+                  <select
+                    value={formData.tierInterest}
+                    onChange={(e) => setFormData({ ...formData, tierInterest: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950 text-white focus:outline-none focus:border-amber-400 transition"
+                  >
+                    <option value="Presenting Title Underwriter">Presenting Title Underwriter (Category Exclusive)</option>
+                    <option value="Boardroom Pod Co-Practitioner">Boardroom Pod Co-Practitioner (Embedded Advisory)</option>
+                    <option value="Kinetic Vitality & Recovery Curator">Kinetic Vitality &amp; Recovery Curator</option>
+                    <option value="Custom Bespoke Partnership">Custom / Bespoke Industry Activation</option>
+                  </select>
+                </div>
+
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
                     Primary Practice Area &amp; Strategic Goal
