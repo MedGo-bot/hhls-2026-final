@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, ShieldCheck, Sparkles, Lock, Users, ArrowRight, CheckCircle2, Clock, } from 'lucide-react';
+import { Check, ShieldCheck, Sparkles, Lock, Users, ArrowRight, CheckCircle2, Clock, Calendar } from 'lucide-react';
 
 export default function Pricing() {
   const [formData, setFormData] = useState({
@@ -9,7 +9,7 @@ export default function Pricing() {
     companyName: '',
     website: '',
     title: '',
-    revenue: '$1M - $50M',
+    revenue: '$1M - $24M',
     preferredTrack: 'Executive Residency ($2,495)',
     primaryFriction: 'AI Workforce & Execution Gaps'
   });
@@ -64,7 +64,7 @@ export default function Pricing() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border border-gray-700" style={{ background: 'rgba(197, 160, 89, 0.1)' }}>
-            <CalendarDays className="w-4 h-4" style={{ color: 'var(--gold)' }} />
+            <Calendar className="w-4 h-4" style={{ color: 'var(--gold)' }} />
             <span className="text-sm font-medium" style={{ color: 'var(--gold)' }}>The Power of Purposeful Leadership • October 19–20, 2027</span>
           </div>
 
@@ -76,7 +76,7 @@ export default function Pricing() {
         {/* The Core Story Banner: Why Late October Matters */}
         <div className="max-w-4xl mx-auto p-8 rounded-2xl border border-gray-800 bg-slate-900/80 mb-16 shadow-xl backdrop-blur-sm text-left">
           <div className="flex items-center gap-3 mb-4">
-            <BatteryCharging className="w-6 h-6" style={{ color: 'var(--gold)' }} />
+            <Sparkles className="w-6 h-6" style={{ color: 'var(--gold)' }} />
             <h3 className="text-xl sm:text-2xl font-bold text-white">Why This Summit Happens in October</h3>
           </div>
           
@@ -324,154 +324,3 @@ export default function Pricing() {
                             : 'border-gray-800 bg-slate-950/60 text-gray-400 hover:border-gray-700'
                         }`}
                       >
-                        <span>{track}</span>
-                        <input
-                          type="radio"
-                          name="preferredTrack"
-                          value={track}
-                          checked={formData.preferredTrack === track}
-                          onChange={(e) => setFormData({ ...formData, preferredTrack: e.target.value })}
-                          className="sr-only"
-                        />
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.fullName}
-                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950 text-white focus:outline-none focus:border-amber-400 transition"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
-                      Direct Work Email *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.workEmail}
-                      onChange={(e) => setFormData({ ...formData, workEmail: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950 text-white focus:outline-none focus:border-amber-400 transition"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
-                      Company Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.companyName}
-                      onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950 text-white focus:outline-none focus:border-amber-400 transition"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
-                      Company Website / URL *
-                    </label>
-                    <input
-                      type="url"
-                      required
-                      value={formData.website}
-                      onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950 text-white focus:outline-none focus:border-amber-400 transition"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
-                      Executive Role / Title *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.title}
-                      onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950 text-white focus:outline-none focus:border-amber-400 transition"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
-                      Annual Company Revenue *
-                    </label>
-                    <select
-                      value={formData.revenue}
-                      onChange={(e) => setFormData({ ...formData, revenue: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950 text-white focus:outline-none focus:border-amber-400 transition"
-                    >
-                      <option value="$1M - $24M">$1M – $24M Annual Revenue</option>
-                      <option value="$25M - $50M">$25M – $50M Annual Revenue</option>
-                      <option value="$50M - $100M">$50M – $100M Annual Revenue</option>
-                      <option value="$100M - $250M">$100M – $250M Annual Revenue</option>
-                      <option value="$250M+">$250M+ Enterprise Scale</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
-                    Primary 2028 Strategic Priority
-                  </label>
-                  <select
-                    value={formData.primaryFriction}
-                    onChange={(e) => setFormData({ ...formData, primaryFriction: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950 text-white focus:outline-none focus:border-amber-400 transition"
-                  >
-                    <option value="AI Workforce & Execution Gaps">Clarity: Orchestrating Agentic AI &amp; Closing Execution Gaps for 2028</option>
-                    <option value="Executive Burnout & Stamina">Courage: Managing Fiduciary Stress &amp; Sustaining Executive Stamina</option>
-                    <option value="Distributed Team Trust & Culture">Cohesion: Aligning Distributed Divisions Around 2028 Growth</option>
-                  </select>
-                </div>
-
-                {/* Submit Action */}
-                <div className="pt-4">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full py-4 px-8 font-bold rounded-xl text-slate-950 transition-all duration-200 hover:scale-[1.01] hover:shadow-xl text-base flex items-center justify-center gap-2 cursor-pointer"
-                    style={{ background: 'var(--gold)', boxShadow: '0 10px 30px rgba(197, 160, 89, 0.25)' }}
-                  >
-                    {isSubmitting ? (
-                      <span className="inline-flex items-center gap-2">
-                        <Clock className="w-5 h-5 animate-spin" />
-                        Submitting Application to Admissions...
-                      </span>
-                    ) : (
-                      <>
-                        <span>Submit Executive Application for Review</span>
-                        <ArrowRight className="w-5 h-5" />
-                      </>
-                    )}
-                  </button>
-                  <p className="text-center text-xs text-gray-500 mt-3">
-                    All inquiries are held in strict confidence under non-disclosure standards.
-                  </p>
-                </div>
-              </form>
-            </>
-          )}
-
-        </div>
-
-      </div>
-    </section>
-  );
-}
