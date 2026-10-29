@@ -1,23 +1,23 @@
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import WhyAttend from './components/WhyAttend';
-import Vision from './components/Vision';
-import Speakers from './components/Speakers';
 import Pricing from './components/Pricing';
+import Speakers from './components/Speakers';
 import Sponsorship from './components/Sponsorship';
-import Footer from './components/Footer';
+import Vision from './components/Vision';
+import WhyAttend from './components/WhyAttend';
 
 function App() {
   return (
     <div className="min-h-screen">
+      <Footer />
       <Header />
       <Hero />
-      <WhyAttend />
-      <Vision />
-      <Speakers />
       <Pricing />
-      <Sponsorship />
-      <Footer />
+      <Speakers />
+      <Sponsorship/>
+      <Vision/>
+      <WhyAttend />
     </div>
   );
 }
