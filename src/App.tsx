@@ -10,14 +10,14 @@ import WhyAttend from './components/WhyAttend';
 function App() {
   return (
     <div className="min-h-screen">
-      <Footer />
       <Header />
       <Hero />
-      <Pricing />
+      <WhyAttend />
+      <Vision />
       <Speakers />
       <Sponsorship/>
-      <Vision/>
-      <WhyAttend />
+      <Pricing/>
+      <Footer />
     </div>
   );
 }
