@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, ShieldCheck, Sparkles, Lock, Users, ArrowRight, CheckCircle2, Clock, CalendarDays, BatteryCharging } from 'lucide-react';
+import { Check, ShieldCheck, Sparkles, Lock, Users, ArrowRight, CheckCircle2, Clock, } from 'lucide-react';
 
 export default function Pricing() {
   const [formData, setFormData] = useState({
