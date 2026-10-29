@@ -1,38 +1,85 @@
+import React from 'react';
+
 export default function Vision() {
   return (
-    <section id="vision" className="py-20 px-5 max-w-6xl mx-auto">
-      <h2 className="text-4xl md:text-5xl text-center mb-16 font-bold" style={{ color: 'var(--gold)' }}>
-        What Makes This Different
-      </h2>
-
-      <div className="grid md:grid-cols-3 gap-8">
-        <div className="p-8 rounded-lg" style={{ background: 'var(--navy)', borderLeft: '3px solid var(--gold)' }}>
-          <h3 className="text-2xl mb-4 font-bold" style={{ color: 'var(--gold)' }}>
-            The Physical Asset
-          </h3>
-          <p className="text-gray-300 leading-relaxed">
-            You will not leave with 'notes'—you will leave with an audited, 12-month operational blueprint. This binder is the physical manifestation of your 2026 strategy, containing your specific milestones, your 'Direct Accountability' maps, and the financial triggers needed to hit your $100k+ profit pools. It is the only asset you'll need on your desk Monday morning.
+    <section id="vision" className="py-20 bg-neutral-950 text-white border-t border-neutral-800">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="mb-12">
+          <span className="text-amber-400 text-xs font-bold tracking-widest uppercase bg-amber-400/10 border border-amber-400/20 px-3.5 py-1 rounded-full inline-block mb-3">
+            The 2028 Strategic Vision
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+            Leading Autonomous Systems. Sustaining Human Capacity.
+          </h2>
+          <p className="text-gray-400 text-base max-w-3xl">
+            The novelty of basic AI has worn off—replaced by board-level scrutiny over autonomous software, coupled with unprecedented executive fatigue. Here is how our vision addresses both:
           </p>
         </div>
 
-        <div className="p-8 rounded-lg" style={{ background: 'var(--navy)', borderLeft: '3px solid var(--gold)' }}>
-          <h3 className="text-2xl mb-4 font-bold" style={{ color: 'var(--gold)' }}>
-            Boardroom Pods
-          </h3>
-          <p className="text-gray-300 leading-relaxed">
-            We've eliminated 'Networking.' In our Boardroom Pods, we use Collaborative Architecture to dismantle the specific friction points currently stalling your growth. These are closed-door, high-trust sessions where 5-6 peers act as your temporary Board of Directors. We don't swap business cards; we solve $100k problems in real-time.
+        {/* Scannable Bullet Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          
+          {/* Pillar 1: AI Governance & Autonomous Strategy */}
+          <div className="p-8 rounded-2xl bg-neutral-900/90 border border-neutral-800">
+            <h3 className="text-xl font-bold text-amber-400 mb-2">
+              1. Enterprise Governance for Autonomous AI
+            </h3>
+            <p className="text-gray-400 text-sm mb-6">
+              Move beyond high-level tech demos into actionable board-level risk management and operational execution.
+            </p>
+            <ul className="space-y-4 text-sm text-gray-300">
+              <li className="flex items-start gap-3">
+                <span className="text-amber-400 font-bold text-base leading-none">✓</span>
+                <span><strong>Agentic Fleet Oversight:</strong> Direct frameworks for managing liability, compliance, and control as software acts autonomously.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-400 font-bold text-base leading-none">✓</span>
+                <span><strong>Synthetic Workforce Integration:</strong> Structuring cross-functional leadership alongside digital, autonomous labor.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-400 font-bold text-base leading-none">✓</span>
+                <span><strong>Board-Ready Judgment:</strong> Cutting through hype to establish clear decision rights and operational boundaries.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Pillar 2: Executive Longevity & Peak Performance */}
+          <div className="p-8 rounded-2xl bg-neutral-900/90 border border-neutral-800">
+            <h3 className="text-xl font-bold text-amber-400 mb-2">
+              2. Executive Longevity &amp; Energy Optimization
+            </h3>
+            <p className="text-gray-400 text-sm mb-6">
+              High-velocity strategic execution requires an executive engine operating at absolute peak physical and cognitive health.
+            </p>
+            <ul className="space-y-4 text-sm text-gray-300">
+              <li className="flex items-start gap-3">
+                <span className="text-amber-400 font-bold text-base leading-none">✓</span>
+                <span><strong>Biomarker &amp; Stress Audits:</strong> On-site comprehensive biological profiling and cognitive stress diagnostics.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-400 font-bold text-base leading-none">✓</span>
+                <span><strong>Oceanfront Recovery Protocol:</strong> Guided low-country breathwork and targeted physical reset sessions.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-amber-400 font-bold text-base leading-none">✓</span>
+                <span><strong>12-Month Longevity Playbook:</strong> A personalized, actionable health and energy roadmap to take home.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Bottom Takeaway Bar */}
+        <div className="mt-8 p-4 rounded-xl bg-amber-400/5 border border-amber-400/20 text-center">
+          <p className="text-amber-200 text-sm font-semibold">
+            The Takeaway: Ironclad governance for your organization. Peak cognitive endurance for yourself.
           </p>
         </div>
 
-        <div className="p-8 rounded-lg" style={{ background: 'var(--navy)', borderLeft: '3px solid var(--gold)' }}>
-          <h3 className="text-2xl mb-4 font-bold" style={{ color: 'var(--gold)' }}>
-            Faculty Council
-          </h3>
-          <p className="text-gray-300 leading-relaxed">
-            Direct, un-gated access to the 'Amazing 7 Faculty.' These are not keynote speakers who leave after the applause. These are world-class practitioners in AI Integration, High-Stakes Negotiation, and Human Capital. They are in the mansion with you, sitting at the dinner table, and auditing your Roadmap Binder to ensure your 2026 trajectory is mathematically sound.
-          </p>
-        </div>
       </div>
     </section>
   );
 }
+ 
