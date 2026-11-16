@@ -9,7 +9,7 @@ export default function Pricing() {
     companyName: '',
     website: '',
     title: '',
-    revenue: '$1M - $24M',
+    revenue: '$5M - $24M',
     preferredTrack: 'Executive Residency ($2,495)',
     primaryFriction: 'AI Workforce & Execution Gaps'
   });
