@@ -3,40 +3,8 @@
   <!-- Main Executive Summit Landing Page -->
   <url>
     <loc>https://hiltonheadleadershipsummit.com/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- Deep Link: Strategic Vision & 2028 Pillars -->
-  <url>
-    <loc>https://hiltonheadleadershipsummit.com/#vision</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Deep Link: Speakers & Steering Committee -->
-  <url>
-    <loc>https://hiltonheadleadershipsummit.com/#speakers</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Deep Link: Business Case & ROI Research -->
-  <url>
-    <loc>https://hiltonheadleadershipsummit.com/#why-attend</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Deep Link: Executive Pricing & Registration -->
-  <url>
-    <loc>https://hiltonheadleadershipsummit.com/#pricing</loc>
-    <lastmod>2026-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
 </urlset>
