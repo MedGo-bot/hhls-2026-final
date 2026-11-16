@@ -126,7 +126,7 @@ export default function Pricing() {
               <div className="border-t border-gray-800 pt-6 space-y-3 mb-8">
                 <div className="flex items-start gap-3 text-sm text-gray-300">
                   <Check className="w-4 h-4 mt-1 flex-shrink-0" style={{ color: 'var(--gold)' }} />
-                  <span>Full 2-Day Working Residency (20–22 Working Hours)</span>
+                  <span>Full 2-Day Working Residency (12 Working Hours)</span>
                 </div>
                 <div className="flex items-start gap-3 text-sm text-gray-300">
                   <Check className="w-4 h-4 mt-1 flex-shrink-0" style={{ color: 'var(--gold)' }} />
@@ -177,7 +177,7 @@ export default function Pricing() {
               <div className="border-t border-gray-800 pt-6 space-y-3 mb-8">
                 <div className="flex items-start gap-3 text-sm text-gray-200">
                   <Check className="w-4 h-4 mt-1 flex-shrink-0" style={{ color: 'var(--gold)' }} />
-                  <span><strong>Complete 2-Day Residency (20–22 Working Hours)</strong></span>
+                  <span><strong>Complete 2-Day Residency (12 Working Hours)</strong></span>
                 </div>
                 <div className="flex items-start gap-3 text-sm text-gray-200">
                   <Check className="w-4 h-4 mt-1 flex-shrink-0" style={{ color: 'var(--gold)' }} />
