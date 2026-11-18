@@ -340,6 +340,67 @@ export default function Pricing() {
                   </div>
                 </div>
 
+                {/* Applicant Contact & Revenue Details */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.fullName}
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                      placeholder="Jane Doe"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950/60 text-white text-sm focus:border-amber-400 focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
+                      Work Email *
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      value={formData.workEmail}
+                      onChange={(e) => setFormData({ ...formData, workEmail: e.target.value })}
+                      placeholder="jane@company.com"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950/60 text-white text-sm focus:border-amber-400 focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
+                      Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.companyName}
+                      onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                      placeholder="Acme Corp"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950/60 text-white text-sm focus:border-amber-400 focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">
+                      Annual Company Revenue *
+                    </label>
+                    <select
+                      value={formData.revenue}
+                      onChange={(e) => setFormData({ ...formData, revenue: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl border border-gray-800 bg-slate-950/60 text-white text-sm focus:border-amber-400 focus:outline-none"
+                    >
+                      <option value="Under $5M (Founder / Startup)">Under $5M (Founder / Startup)</option>
+                      <option value="$5M - $24M">$5M - $24M</option>
+                      <option value="$25M - $50M">$25M - $50M</option>
+                      <option value="$50M+">$50M+</option>
+                    </select>
+                  </div>
+                </div>
+
                 {/* Submit Action */}
                 <button
                   type="submit"
