@@ -139,7 +139,7 @@ export default function Sponsorship() {
             <div className="text-xs uppercase tracking-wider text-gray-400">Enterprise Decision-Makers</div>
           </div>
           <div className="p-6 rounded-2xl border border-gray-800 bg-slate-950/60 text-center">
-            <div className="text-3xl font-extrabold text-white mb-1" style={{ color: 'var(--gold)' }}>$20M–$250M</div>
+            <div className="text-3xl font-extrabold text-white mb-1" style={{ color: 'var(--gold)' }}>$5M–$250M</div>
             <div className="text-xs uppercase tracking-wider text-gray-400">Attendee Company ARR</div>
           </div>
           <div className="p-6 rounded-2xl border border-gray-800 bg-slate-950/60 text-center">
